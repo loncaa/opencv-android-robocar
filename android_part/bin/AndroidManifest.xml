@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="hr.etfos.diplomski"
+    android:versionCode="21"
+    android:versionName="2.1">
+
+    <application
+        android:icon="@drawable/icon"
+        android:theme="@android:style/Theme.NoTitleBar.Fullscreen" 
+        android:debuggable="true">
+        
+        <activity
+            android:name="hr.etfos.diplomski.Activities.MainActivity"
+            android:label="@string/title_activity_main" 
+            android:screenOrientation="portrait" >
+            
+            <intent-filter>
+	         <action android:name="android.intent.action.MAIN" />
+	         <category android:name="android.intent.category.LAUNCHER" />
+         	</intent-filter>
+        </activity>
+        
+        <activity
+            android:name="hr.etfos.diplomski.Activities.CameraActivity"
+            android:label="@string/title_activity_camera"
+            android:configChanges="keyboardHidden|orientation"
+            android:screenOrientation="landscape" >
+        </activity>
+
+    </application>
+
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:resizeable="true"
+        android:smallScreens="true" />
+
+    <uses-sdk android:minSdkVersion="8" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.BLUETOOTH"/>
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN"/>
+
+    <!--   
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-feature
+        android:name="android.hardware.camera.autofocus"
+        android:required="false" />
+        -->
+
+</manifest>
